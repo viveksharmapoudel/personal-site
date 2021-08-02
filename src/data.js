@@ -18,6 +18,10 @@ export const skills = [
   { title: "Python", value: 70 },
   { title: "Django", value: 80 },
   { title: "REST Framework", value: 60 },
+  { title: "reactjs", value: 80 },
+  { title: "nextjs", value: 80 },
+  { title: "redux", value: 50 },
+  { title: "golang", value: 50 },
 ];
 
 export const workExperience = [
