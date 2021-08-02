@@ -1,4 +1,3 @@
-version: 2
 jobs:
   build_site:
     docker:
@@ -28,7 +27,7 @@ jobs:
 
       - run:
           name: Firebase Deploy
-          command: firebase deploy --token "$FIREBASE_TOKEN"
+          command: npx run firebase deploy --token "$FIREBASE_TOKEN"
 
 version: 2.1
 workflows:
