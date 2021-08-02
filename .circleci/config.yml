@@ -1,0 +1,28 @@
+version: 2 
+jobs: 
+  build:
+    docker:
+      - image: node:14.17.0
+
+    working_directory:~/personnal-site
+
+    steps:
+      - checkout
+
+      #download and cache dependencies
+      - restore_cache:
+          Keys:
+            - v1-dependencies-{{checksum "package-lock.json"}}
+            - v1-dependencies-
+      
+      - run:  npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+            key:  v1-dependencies-{{checksum "package.json"}}
+
+      # run tests
+      - run: npm run build
+
+      - run: firebase deploy
