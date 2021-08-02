@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build_site:
     docker:
       - image: node:14.17.0
 
@@ -29,3 +29,12 @@ jobs:
       - run:
           name: Firebase Deploy
           command: firebase deploy --token "$FIREBASE_TOKEN"
+
+version: 2.1
+workflows:
+  build_site:
+    jobs:
+      - build_site:
+          filters:
+            branches:
+              only: develop
