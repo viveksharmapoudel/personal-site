@@ -1,0 +1,79 @@
+.about {
+  align-items: center;
+  margin-top: 40px;
+}
+
+.about > h1 {
+  text-align: center;
+  color: var(--clr-text-color);
+  text-decoration: underline;
+}
+
+.about__section_title {
+  margin: 20px 5px 20px;
+  color: #4f4846;
+}
+
+.each__edu__work {
+  display: flex;
+  margin-bottom: 10px;
+}
+.edu__work__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vertical__line {
+  border-left: 6px solid #266150;
+  height: 100%;
+}
+.each__edu__work__info {
+  margin-left: 10px;
+}
+.each__edu__work__info > .location {
+  font-weight: 600;
+  color: #4f4846;
+  font-size: 12px;
+}
+
+.each__info {
+  display: flex;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  align-items: center;
+}
+.each__info > h4 {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.each__info > p {
+  font-size: 12px;
+  color: #4f4846;
+}
+
+.each__skill {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.skill__title {
+  font-size: 14px;
+  font-weight: 700px;
+}
+
+@media screen and (min-width: 800px) {
+  .personalInfo__skills__section,
+  .edu__work__section {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+  .personal__info,
+  .skills,
+  .experiences,
+  .educations {
+    flex: 0.3;
+  }
+}

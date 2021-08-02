@@ -1,0 +1,53 @@
+.intro {
+  background-color: #e8cebf;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.intro > img {
+  object-fit: contain;
+  max-height: 300px;
+  max-width: fit-content;
+  margin: 10px;
+  margin-left: 20px;
+  border-radius: 2px;
+  box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+}
+
+.content {
+  margin-left: 10px;
+}
+.content > h1 {
+  font-size: 60px;
+  font-family: "Dancing Script", cursive;
+  color: var(--clr-text-color);
+}
+
+@media screen and (max-width: 480px) {
+  .intro > img {
+    display: block;
+    margin: 10px auto;
+    padding-top: 20px;
+  }
+  .content > h1 {
+    text-align: center;
+  }
+  .content > p {
+    padding: 10px;
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .content > p {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro {
+    margin-top: 80px;
+    display: flex;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
