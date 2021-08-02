@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: node:14.17.0
 
-    working_directory:~/personnal-site
+    working_directory: ~/personnal-site
 
     steps:
       - checkout
@@ -25,4 +25,4 @@ jobs:
       # run tests
       - run: npm run build
 
-      - run: firebase deploy
+      # - run: firebase deploy
